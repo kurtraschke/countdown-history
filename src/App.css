@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-rows: max-content max-content 1fr max-content;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.header {
+}
+
+.inputs {
+    padding: 1em;
+}
+
+.content {
+    overflow: auto;
+    padding: 1em;
+}
+
+.footer {
+
+}
