@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@blueprintjs/core": "^5.5.1",
+    "@blueprintjs/datetime": "^5.2.8",
     "@blueprintjs/datetime2": "^2.2.1",
     "@blueprintjs/icons": "^5.2.1",
     "@blueprintjs/select": "^5.0.20",
@@ -37,6 +38,13 @@
     "prettier": "^3.0.3",
     "sass": "^1.69.4",
     "vite": "5.0.5"
+  },
+  "overrides": {
+    "@blueprintjs/datetime": {
+      "@types/react": "$@types/react",
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   },
   "prettier": {
     "tabWidth": 4,
