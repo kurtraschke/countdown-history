@@ -1,6 +1,5 @@
-import { DateInput3, DatePicker3 } from "@blueprintjs/datetime2";
+import { DateInput3 } from "@blueprintjs/datetime2";
 import { DateTime } from "luxon";
-
 import * as locales from "date-fns/locale";
 import _ from "lodash";
 import { Classes, FormGroup } from "@blueprintjs/core";

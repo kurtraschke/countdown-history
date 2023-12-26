@@ -2,11 +2,11 @@ import { Button, Collapse, Icon, NonIdealState, NonIdealStateIconSize, Pre } fro
 import React, { useState } from "react";
 
 
-const ErrorState = ({errorMessage}) => {
+const ErrorState = ({ errorMessage }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
         setIsOpen(!isOpen);
-    }
+    };
 
     return (<NonIdealState
         icon={<Icon icon={"warning-sign"} size={NonIdealStateIconSize.STANDARD} />}
@@ -20,6 +20,6 @@ const ErrorState = ({errorMessage}) => {
             </Pre>
         </Collapse>
     </NonIdealState>);
-}
+};
 
 export default ErrorState;
