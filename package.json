@@ -13,7 +13,7 @@
     "@blueprintjs/core": "^5.5.1",
     "@blueprintjs/datetime2": "^2.2.1",
     "@blueprintjs/icons": "^5.2.1",
-    "@blueprintjs/select": "^5.0.16",
+    "@blueprintjs/select": "^5.0.20",
     "@blueprintjs/table": "^5.0.16",
     "@tanstack/query-sync-storage-persister": "^5.14.2",
     "@tanstack/react-query": "^5.0.0",
