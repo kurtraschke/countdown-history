@@ -1,21 +1,12 @@
 import { DateInput3 } from "@blueprintjs/datetime2";
 import { DateTime } from "luxon";
-import * as locales from "date-fns/locale";
-import _ from "lodash";
 import { Classes, FormGroup } from "@blueprintjs/core";
 
-const localesByCode = new Map(_.map(locales, (e) => {
-    return [e.code, e];
-}));
 
-function loader(localeCode) {
-    const theLocale = localesByCode.get(localeCode);
-    if (!!theLocale) {
-        return Promise.resolve(theLocale);
-    } else {
-        return Promise.reject(`Locale ${localeCode} not found.`);
-    }
-}
+const loadDateFnsLocale = async (localeCode) => {
+    const localeModule = await import(`../../node_modules/date-fns/esm/locale/${localeCode}/index.js`);
+    return localeModule.default;
+};
 
 function DateTimeSelector({ defaultValue, onChange }) {
     return (<FormGroup
@@ -30,7 +21,7 @@ function DateTimeSelector({ defaultValue, onChange }) {
             defaultTimezone={"US/Eastern"}
             defaultValue={defaultValue.toFormat("yyyy-MM-dd HH:mm:ss")}
             onChange={(value) => onChange(DateTime.fromISO(value))}
-            dateFnsLocaleLoader={loader}
+            dateFnsLocaleLoader={loadDateFnsLocale}
         />
     </FormGroup>);
 }
