@@ -7,8 +7,10 @@ import React, { useState } from "react";
 import {
     Button,
     Classes,
-    ControlGroup, FormGroup,
-    HTMLTable, MenuItem,
+    ControlGroup,
+    FormGroup,
+    HTMLTable,
+    MenuItem,
     NonIdealState,
     NonIdealStateIconSize,
     Popover,
