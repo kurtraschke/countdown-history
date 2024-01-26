@@ -19,7 +19,7 @@
     "@tanstack/query-sync-storage-persister": "^5.17.15",
     "@tanstack/react-query": "^5.17.15",
     "@tanstack/react-query-persist-client": "^5.17.15",
-    "axios": "^1.6.5",
+    "axios": "^1.6.7",
     "core-js": "^3.35.0",
     "lodash": "^4.17.21",
     "luxon": "^3.4.4",
