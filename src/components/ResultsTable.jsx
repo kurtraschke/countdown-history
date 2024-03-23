@@ -40,7 +40,7 @@ function formatTime({ arrival_time: arrivalTime, header_timestamp: headerTimesta
 const API_BASE =
     import.meta.env.DEV && !!import.meta.env.VITE_API_BASE
         ? import.meta.env.VITE_API_BASE
-        : "https://api.choochoo.systems/";
+        : "https://api.choochoo.systems/api/";
 
 function ResultsTable({ stopId, dateTime }) {
     const [selectedTimeWindow, setSelectedTimeWindow] = useState();
