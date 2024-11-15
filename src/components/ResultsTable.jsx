@@ -34,10 +34,7 @@ function formatTime({ arrival_time: arrivalTime, header_timestamp: headerTimesta
     return (Math.sign(seconds) === 1 ? "+" : "") + Math.round(Math.abs(seconds) / 60);
 }
 
-const API_BASE =
-    import.meta.env.DEV && !!import.meta.env.VITE_API_BASE
-        ? import.meta.env.VITE_API_BASE
-        : "https://api.choochoo.systems/api/";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 function ResultsTable({ stopId, dateTime }) {
     const [selectedTimeWindow, setSelectedTimeWindow] = useState();
