@@ -19,9 +19,6 @@ import {
 import urlcat from "urlcat";
 import { MultiSelect2 } from "@blueprintjs/select";
 
-import "core-js/actual/set/difference";
-import "core-js/actual/set/union";
-import "core-js/actual/set/intersection";
 
 import ErrorState from "./ErrorState.jsx";
 import { highlightText } from "../utils.jsx";
