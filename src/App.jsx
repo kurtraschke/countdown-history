@@ -48,12 +48,12 @@ function App() {
             </div>
             <div className={"content"}>
                 {((!!selectedStopId) && (!!selectedDateTime)) ?
-                <ResultsTable stopId={selectedStopId} dateTime={selectedDateTime} /> :
-                <NonIdealState
-                    icon={<Icon icon={"search"} size={NonIdealStateIconSize.STANDARD} />}
-                    title={"Select parameters"}
-                    description={"Select a station, direction, and probe time to continue."}
-                />
+                    <ResultsTable stopId={selectedStopId} dateTime={selectedDateTime} /> :
+                    <NonIdealState
+                        icon={<Icon icon={"search"} size={NonIdealStateIconSize.STANDARD} />}
+                        title={"Select parameters"}
+                        description={"Select a station, direction, and probe time to continue."}
+                    />
                 }
             </div>
             <div className={"footer"}>

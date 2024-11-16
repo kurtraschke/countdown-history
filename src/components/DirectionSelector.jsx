@@ -1,8 +1,8 @@
 import { Classes, FormGroup, HTMLSelect } from "@blueprintjs/core";
 
-const DIRECTIONS = [{value: "N", label: "North"}, {value: "S", label: "South"}]
+const DIRECTIONS = [{ value: "N", label: "North" }, { value: "S", label: "South" }];
 
-function DirectionSelector({defaultValue, onChange}) {
+function DirectionSelector({ defaultValue, onChange }) {
     return (
         <FormGroup
             label="Direction"

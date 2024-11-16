@@ -35,4 +35,4 @@ function escapeRegExpChars(text) {
     return text.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
-export {highlightText};
+export { highlightText };

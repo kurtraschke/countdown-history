@@ -54,7 +54,7 @@ function StationSelector({ defaultSelectedItem, onItemSelect }) {
         );
     };
 
-    const [disabled, selectItems] = (isPending || error ) ? [true, []] : [false, data];
+    const [disabled, selectItems] = (isPending || error) ? [true, []] : [false, data];
 
     //const defaultItem = _.find(selectItems, (e) => e["gtfs_stop_id"] === defaultSelectedItem);
 
@@ -72,7 +72,10 @@ function StationSelector({ defaultSelectedItem, onItemSelect }) {
                 noResults={<MenuItem disabled={true} text="No results." roleStructure="listoption" />}
                 popoverProps={{ matchTargetWidth: true }}
                 resetOnSelect={true}
-                onItemSelect={(item) => {setSelectedItem(item); onItemSelect(item);}}
+                onItemSelect={(item) => {
+                    setSelectedItem(item);
+                    onItemSelect(item);
+                }}
                 //defaultSelectedItem={defaultItem}
             />
         </FormGroup>
