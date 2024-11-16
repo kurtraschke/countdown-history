@@ -16,6 +16,7 @@
     "@blueprintjs/icons": "^5.14.0",
     "@blueprintjs/select": "^5.3.3",
     "@blueprintjs/table": "^5.2.5",
+    "@supabase/postgrest-js": "^1.17.5",
     "@tanstack/query-sync-storage-persister": "^5.59.20",
     "@tanstack/react-query": "^5.60.2",
     "@tanstack/react-query-persist-client": "^5.60.2",
@@ -23,8 +24,7 @@
     "lodash": "^4.17.21",
     "luxon": "^3.5.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "urlcat": "^3.1.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",

@@ -1,6 +1,5 @@
 import { Cell, Column, RegionCardinality, Table2 } from "@blueprintjs/table";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { DateTime } from "luxon";
 import _ from "lodash";
 import React, { useState } from "react";
@@ -16,12 +15,12 @@ import {
     Popover,
     Spinner
 } from "@blueprintjs/core";
-import urlcat from "urlcat";
 import { MultiSelect2 } from "@blueprintjs/select";
-
+import { PostgrestClient } from "@supabase/postgrest-js";
 
 import ErrorState from "./ErrorState.jsx";
 import { highlightText } from "../utils.jsx";
+
 
 function formatTime({ arrival_time: arrivalTime, header_timestamp: headerTimestamp }) {
     const pointArrival = DateTime.fromISO(arrivalTime);
@@ -36,6 +35,8 @@ function formatTime({ arrival_time: arrivalTime, header_timestamp: headerTimesta
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
+const postgrest = new PostgrestClient(API_BASE);
+
 function ResultsTable({ stopId, dateTime }) {
     const [selectedTimeWindow, setSelectedTimeWindow] = useState();
     const [selectedRouteIds, setSelectedRouteIds] = useState(() => {
@@ -49,15 +50,13 @@ function ResultsTable({ stopId, dateTime }) {
         queryKey: ["countdown_history", stopId, dateTime],
         meta: { noPersist: true },
         queryFn: ({ signal, queryKey: [_, stopId, dateTime] }) =>
-            axios
-                .get(urlcat(API_BASE, "/rpc/countdown_history_json_v2"),
-                    {
-                        params: {
-                            stop_id: stopId,
-                            probe_time: dateTime.startOf("second").toISO({ suppressMilliseconds: true })
-                        },
-                        signal
-                    })
+            postgrest.rpc("countdown_history_json_v2",
+                {
+                    stop_id: stopId,
+                    probe_time: dateTime.startOf("second").toISO({ suppressMilliseconds: true })
+                },
+                { get: true })
+                .abortSignal(signal)
                 .then((res) => res.data)
     });
 
