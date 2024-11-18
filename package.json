@@ -16,7 +16,7 @@
     "@blueprintjs/icons": "^5.14.0",
     "@blueprintjs/select": "^5.3.3",
     "@blueprintjs/table": "^5.2.5",
-    "@supabase/postgrest-js": "^1.17.5",
+    "@supabase/postgrest-js": "^1.17.6",
     "@tanstack/query-sync-storage-persister": "^5.60.5",
     "@tanstack/react-query": "^5.60.5",
     "@tanstack/react-query-persist-client": "^5.60.5",
