@@ -40,9 +40,9 @@
   },
   "overrides": {
     "@blueprintjs/datetime": {
-      "@types/react": "$@types/react",
-      "react": "$react",
-      "react-dom": "$react-dom"
+      "@types/react": "^16.14.41 || 17 || 18",
+      "react": "^16.8 || 17 || 18",
+      "react-dom": "^16.8 || 17 || 18"
     }
   },
   "prettier": {
