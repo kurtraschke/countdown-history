@@ -12,7 +12,7 @@
   "dependencies": {
     "@blueprintjs/core": "^5.15.0",
     "@blueprintjs/datetime": "^5.3.16",
-    "@blueprintjs/datetime2": "^2.3.16",
+    "@blueprintjs/datetime2": "^2.3.17",
     "@blueprintjs/icons": "^5.14.0",
     "@blueprintjs/select": "^5.3.4",
     "@blueprintjs/table": "^5.2.6",
